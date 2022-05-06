@@ -36,7 +36,7 @@ if (sliders) {
     sliders_bild_callback()
 }
 
-function sliders_bild_callback(params) {}
+function sliders_bild_callback(params) { }
 
 let sliderScollItems = document.querySelectorAll('.swiper-scroll');
 if (sliderScollItems.length > 0) {
@@ -132,7 +132,7 @@ burger.addEventListener("click", () => {
 })
 
 for (var i = 0; i < headerItem.length; i++) {
-    headerItem[i].addEventListener("click", function() {
+    headerItem[i].addEventListener("click", function () {
         burger.classList.remove('active')
         headerNav.classList.remove('active')
         document.body.classList.remove('lock')
@@ -146,7 +146,6 @@ new Swiper('.slider-intro__body', {
     spaceBetween: 0,
     autoHeight: true,
     speed: 800,
-    effect: 'fade',
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
@@ -181,6 +180,24 @@ new Swiper('.slider-intro__body', {
     // },
 })
 
+new Swiper(".slider-construction__body", {
+    spaceBetween: 10,
+    navigation: {
+        prevEl: ".slider-thumb-prev",
+        nextEl: ".slider-thumb-next",
+    },
+    thumbs: {
+        swiper: new Swiper(".slider-thumb__body", {
+            spaceBetween: 20,
+            slidesPerView: 4,
+            direction: 'vertical',
+            navigation: {
+                prevEl: ".slider-thumb-prev",
+                nextEl: ".slider-thumb-next",
+            },
+        }),
+    },
+});
 
 new Swiper('.slider-project__body', {
     observer: true,
@@ -241,9 +258,8 @@ tabBtn.forEach(item => {
 })
 
 new Swiper('.slider-gallery__body', {
-    // effect: 'fade',
     autoplay: {
-        delay: 3000,
+        delay: 6000,
         disableOnInteraction: false,
     },
     observer: true,
@@ -262,6 +278,10 @@ new Swiper('.slider-gallery__body', {
             slidesPerView: 1,
             spaceBetween: 0,
             autoHeight: true,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
         768: {
             slidesPerView: 2,
@@ -297,3 +317,64 @@ if (topBtn) {
         scrollToTop()
     })
 }
+
+const lightbox = document.querySelector('.lightbox')
+
+const images = document.querySelectorAll('.lightbox-image');
+const imagesArr = Array.from(document.querySelectorAll('.lightbox-image img'));
+const galleryLeft = document.querySelector('.lightbox__controls--left')
+const galleryRight = document.querySelector('.lightbox__controls--right')
+
+images.forEach(image => {
+    image.addEventListener("click", () => {
+        lightbox.classList.add('active')
+        document.body.classList.add('lock')
+        var img = image.querySelector('img');
+        var lightboxImage = document.createElement('img');
+        lightboxImage.src = img.src;
+        lightbox.insertBefore(lightboxImage, lightbox.firstChild);
+    })
+})
+
+const clickNext = () => {
+    const lightboxImage = lightbox.querySelector('img');
+    const image = imagesArr.find(item => item.src === lightboxImage.src);
+    if (lightboxImage.src === image.src) {
+        const parent = image.parentNode;
+        if (parent.nextElementSibling) {
+            lightboxImage.remove()
+            const nextImage = document.createElement('img');
+            nextImage.src = parent.nextElementSibling.querySelector('img').src;
+            lightbox.insertBefore(nextImage, lightbox.firstChild);
+        } else {
+            galleryRight.classList.add('disabled')
+        }
+    }
+}
+
+const clickPrev = () => {
+    const lightboxImage = lightbox.querySelector('img');
+    const image = imagesArr.find(item => item.src === lightboxImage.src);
+    if (lightboxImage.src === image.src) {
+        const parent = image.parentNode;
+        if (parent.previousElementSibling) {
+            lightboxImage.remove()
+            const nextImage = document.createElement('img');
+            nextImage.src = parent.previousElementSibling.querySelector('img').src;
+            lightbox.insertBefore(nextImage, lightbox.firstChild);
+        } else {
+            galleryLeft.classList.add('disabled')
+        }
+    }
+}
+
+galleryLeft.addEventListener("click", clickPrev)
+galleryRight.addEventListener("click", clickNext)
+
+
+lightbox.addEventListener("click", e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+    document.body.classList.remove('lock');
+    lightbox.querySelector('img').remove();
+})

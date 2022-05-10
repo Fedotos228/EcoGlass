@@ -109,10 +109,17 @@ input {
     }
 }
 
+
+
 input[type=submit] {
     cursor: pointer;
     color: $maincolor;
     background: rgba(255, 255, 255, 0.8);
+    transition: .2s;
+
+    &:hover {
+        background-color: #fff;
+    }
 }
 
 .form {

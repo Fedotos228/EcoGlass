@@ -204,31 +204,7 @@
     }
 }
 
-.newsletter {
-    margin: 100px 0;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    flex-wrap: wrap;
 
-    h2 {
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff;
-
-        span {
-            font-weight: 800;
-            color: $greencolor;
-        }
-    }
-
-    form {
-        font-family: OpenSans;
-    }
-}
 
 .projects {
     margin-bottom: 100px;
@@ -392,28 +368,57 @@
     }
 }
 
-.formular {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 15px;
+.contacts {
+    .formular {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 15px;
 
-    h2 {
-        text-transform: uppercase;
-        color: #FFFFFF;
-        font-weight: 800;
+        h2 {
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-weight: 800;
 
-        &:not(:last-child) {
-            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            span {
+                color: $greencolor;
+            }
+        }
+    }
+
+    .newsletter {
+        padding: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+
+            span {
+                font-weight: 800;
+                color: $greencolor;
+            }
         }
 
-        span {
-            color: $greencolor;
+        form {
+            font-family: OpenSans;
         }
     }
 }
+
+
 
 .gallery {
     margin: 100px 0;
@@ -422,11 +427,13 @@
         .gallery-slider__body {
             .gallery-slider__slider {
                 position: relative;
+                max-width: 1580px;
+                width: 100%;
+                margin: 0 auto;
 
                 .slider-gallery__body {
                     display: block;
-                    // max-width: calc(100% - 160px);
-                    margin: 0 auto;
+                    z-index: 7;
 
                     @media (max-width: $mobileMedium) {
                         max-width: 70%;
@@ -489,6 +496,8 @@
                 }
 
                 .slider-gallery-controls {
+
+
                     @media (max-width: $tablet) {
                         display: none;
                     }
@@ -502,11 +511,14 @@
                     }
 
                     &__arrows {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        z-index: 8;
+
                         .slider-arrow {
                             position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            z-index: 6;
                             background-color: #9AC888;
                             backdrop-filter: blur(4px);
                             border-radius: 60px;
@@ -522,8 +534,7 @@
                             }
 
                             &__prev {
-                                transform: rotate(180deg) translateY(50%);
-                                left: -5%;
+                                transform: rotate(180deg);
 
                                 @media (max-width: $mobileMedium) {
                                     left: 0;
@@ -535,11 +546,7 @@
                             }
 
                             &__next {
-                                right: -5%;
-
-                                @media (max-width: $mobileMedium) {
-                                    right: 0;
-                                }
+                                right: 0;
 
                                 @media(max-width: $mobileSmall) {
                                     right: 1%;

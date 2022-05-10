@@ -269,14 +269,14 @@
                 </div>
             </div>
         </div>
-        <div class="newsletter" style="background: url(img/newsletter.jpg) 50% 50% / cover no-repeat">
+        <!-- <div class="newsletter" style="background: url(img/newsletter.jpg) 50% 50% / cover no-repeat">
             <h2>Fii primul care primește <span>oferte</span> exclusive</h2>
             <h2 class="subtitle">Abonează-te la newsletter-ul nostru</h2>
             <form class="form" action="/">
                 <input type="email" name="" id="" placeholder="Email">
                 <input type="submit" value="Abonează-te">
             </form>
-        </div>
+        </div> -->
         <div class="projects" id="projects">
             <div class="projects-header">
                 <h2>Proiectele noastre</h2>
@@ -295,16 +295,16 @@
                             <div class="project-slider__slider">
                                 <div class="slider-project__body swiper">
                                     <div class="slider-project__slide">
-                                        <img src="img/casa1.jpg" alt="">
+                                        <img src="img/casa1.jpg" alt="" loading="lazy">
                                     </div>
                                     <div class="slider-project__slide">
-                                        <img src="img/casa2.jpg" alt="">
+                                        <img src="img/casa2.jpg" alt="casa" loading="lazy">
                                     </div>
                                     <div class="slider-project__slide">
-                                        <img src="img/casa3.jpg" alt="">
+                                        <img src="img/casa3.jpg" alt="" loading="lazy">
                                     </div>
                                     <div class="slider-project__slide">
-                                        <img src="img/casa4.jpg" alt="">
+                                        <img src="img/casa4.jpg" alt="" loading="lazy">
                                     </div>
                                 </div>
 
@@ -450,63 +450,71 @@
             </div>
         </div>
         <div class="gallery" id="gallery">
-            <div class="gallery__container">
-                <div class="page__gallery-slider gallery-slider">
-                    <div class="gallery-slider__body">
-                        <div class="gallery-slider__slider">
-                            <div class="slider-gallery__body swiper">
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery1.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery2.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery3.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery4.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery4.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery4.jpg" alt="">
-                                </div>
-                                <div class="slider-gallery__slide lightbox-image">
-                                    <img src="img/gallery4.jpg" alt="">
-                                </div>
+            <div class="page__gallery-slider gallery-slider">
+                <div class="gallery-slider__body">
+                    <div class="gallery-slider__slider">
+                        <div class="slider-gallery__body swiper gallery__container">
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery1.jpg" alt="">
                             </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery2.jpg" alt="">
+                            </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery3.jpg" alt="">
+                            </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery4.jpg" alt="">
+                            </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery4.jpg" alt="">
+                            </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery4.jpg" alt="">
+                            </div>
+                            <div class="slider-gallery__slide lightbox-image">
+                                <img src="img/gallery4.jpg" alt="">
+                            </div>
+                        </div>
 
-                            <div class="slider-gallery-controls">
-                                <div class="slider-gallery-controls__arrows slider-arrows">
-                                    <button type="button" class="slider-arrow slider-arrow__prev">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.5 21.25L18.75 15L12.5 8.75V21.25Z" fill="white" />
-                                        </svg>
-                                    </button>
-                                    <button type="button" class="slider-arrow slider-arrow__next">
-                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.5 21.25L18.75 15L12.5 8.75V21.25Z" fill="white" />
-                                        </svg>
-                                    </button>
-                                </div>
+                        <div class="slider-gallery-controls">
+                            <div class="slider-gallery-controls__arrows slider-arrows">
+                                <button type="button" class="slider-arrow slider-arrow__prev">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 21.25L18.75 15L12.5 8.75V21.25Z" fill="white" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="slider-arrow slider-arrow__next">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 21.25L18.75 15L12.5 8.75V21.25Z" fill="white" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="formular" style="background: url(img/formular.jpg) 50% 50% / cover no-repeat;" id="formular">
-            <h2>Pentru orice alte <span>informații</span>, va rugam sa completați formularul</h2>
-            <h2 class="subtitle">sau sunați la +373 069 352 322</h2>
-            <form class="form" action="/">
-                <input type="text" placeholder="Numea">
-                <input type="tel" placeholder="Telefon">
-                <input type="submit" value="Trimite">
-            </form>
+        <div class="contacts" id="formular">
+            <div class="formular" style="background: url(img/formular.jpg) 50% 50% / cover no-repeat;">
+                <h2>Pentru orice alte <span>informații</span>, va rugam sa completați formularul</h2>
+                <h2 class="subtitle">sau sunați la +373 069 352 322</h2>
+                <form class="form" action="/">
+                    <input type="text" placeholder="Numea">
+                    <input type="tel" placeholder="Telefon">
+                    <input type="submit" value="Trimite">
+                </form>
+
+            </div>
+            <div class="newsletter" style="background: url(img/newsletter.jpg) 50% 50% / cover no-repeat">
+                <h2 class="subtitle">Abonează-te la newsletter-ul nostru</h2>
+                <form class="form" action="/">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <input type="submit" value="Abonează-te">
+                </form>
+            </div>
         </div>
         <button class="go-to-top">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

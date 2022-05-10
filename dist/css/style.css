@@ -558,7 +558,7 @@ input[type=submit]:hover {
   position: relative;
 }
 .page__intro-slider .intro-slider__body .intro-slider__slider .slider-intro__body .slider-intro__slide {
-  height: calc(100vh - 105px);
+  height: 100vh;
   display: flex;
   align-items: center;
 }

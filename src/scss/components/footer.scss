@@ -1,5 +1,6 @@
 .footer {
     background-color: #1E2833;
+
     .footer-upper {
         display: flex;
         align-items: center;
@@ -9,14 +10,17 @@
         @include adaptiv-value('padding-bottom', 50, 10, 1);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 50px;
+
         .socials {
             svg {
                 path {
                     fill: #DADADA;
                 }
+
             }
         }
     }
+
     .footer-block {
         display: flex;
         align-items: center;
@@ -25,22 +29,28 @@
         @include adaptiv-value('gap', 70, 40, 1);
         @include adaptiv-value('padding-top', 50, 40, 1);
         @include adaptiv-value('padding-bottom', 70, 50, 1);
+
         .footer-list {
             display: flex;
             align-items: center;
+
             @media(max-width: $mobile) {
                 flex-direction: column
             }
+
             @include adaptiv-value('gap', 80, 30, 1);
+
             a {
                 color: #fff;
                 font-weight: 600;
             }
         }
+
         .representatives {
             display: flex;
             align-items: center;
             @include adaptiv-value('gap', 50, 10, 1);
+
             p {
                 font-family: OpenSans;
                 font-size: 15px;
@@ -49,9 +59,11 @@
             }
         }
     }
+
     .footer-lower {
         padding: 20px 0;
         background-color: #191E24;
+
         p {
             text-align: center;
             font-family: OpenSans;

@@ -147,10 +147,6 @@ textarea {
   padding: 0 15px;
 }
 
-main {
-  margin-top: 105px;
-}
-
 .burger {
   display: none;
 }
@@ -289,15 +285,21 @@ input[type=submit]:hover {
     gap: calc( 5px + 15 * ((100vw - 320px) / 1100));
   }
 }
+.socials svg {
+  transition: 0.1s;
+}
+.socials svg:hover {
+  transform: scale(1.2);
+}
 
 .go-to-top {
   position: fixed;
   right: 90px;
-  bottom: -100px;
+  bottom: 0;
   border-radius: 50%;
   padding: 25px;
   z-index: 10;
-  transition: 0.1s;
+  transition: 0.2s;
   opacity: 0;
   visibility: hidden;
 }
@@ -467,7 +469,7 @@ input[type=submit]:hover {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;

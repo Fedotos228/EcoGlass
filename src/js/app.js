@@ -146,10 +146,10 @@ new Swiper('.slider-intro__body', {
     spaceBetween: 0,
     autoHeight: true,
     speed: 800,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 6000,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: '.slider-intro-controls__dots',
         clickable: true,

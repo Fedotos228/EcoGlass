@@ -2,6 +2,9 @@ import * as flsFunctions from './modules/functions.js'
 
 flsFunctions.isWebp();
 
+const header = document.querySelector('.header')
+flsFunctions.fixedHeader(header)
+
 
 let sliders = document.querySelectorAll('.swiper');
 if (sliders) {
@@ -118,10 +121,14 @@ if (sliderScollItems.length > 0) {
 //     }
 // })
 
+const navItems = document.querySelectorAll('button[data-scroll]');
+const sectionItems = document.querySelectorAll('div[data-scroll]')
 const burger = document.querySelector('.burger')
 const headerNav = document.querySelector('.header-nav')
 const headerList = document.querySelector('.header-nav__list')
 const headerItem = document.querySelectorAll('.header-nav__list li')
+
+flsFunctions.scrollTo(navItems, sectionItems, burger, headerList)
 
 burger.addEventListener("click", () => {
     burger.classList.toggle("active")
@@ -130,6 +137,7 @@ burger.addEventListener("click", () => {
 
 
 })
+
 
 for (var i = 0; i < headerItem.length; i++) {
     headerItem[i].addEventListener("click", function () {
@@ -146,10 +154,10 @@ new Swiper('.slider-intro__body', {
     spaceBetween: 0,
     autoHeight: true,
     speed: 800,
-    // autoplay: {
-    //     delay: 6000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.slider-intro-controls__dots',
         clickable: true,
@@ -158,46 +166,32 @@ new Swiper('.slider-intro__body', {
         nextEl: '.slider-arrow__next',
         prevEl: '.slider-arrow__prev',
     },
-
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 0,
-    //         autoHeight: true,
-    //     },
-    //     768: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 20,
-    //     },
-    //     992: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 20,
-    //     },
-    //     1268: {
-    //         slidesPerView: 4,
-    //         spaceBetween: 30,
-    //     },
-    // },
 })
 
-new Swiper(".slider-construction__body", {
-    spaceBetween: 10,
+new Swiper(".slider-fachwerk__body", {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    speed: 800,
+    effect: 'fade',
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     navigation: {
-        prevEl: ".slider-thumb-prev",
-        nextEl: ".slider-thumb-next",
+        nextEl: '.slider-arrow__next',
+        prevEl: '.slider-arrow__prev',
     },
-    thumbs: {
-        swiper: new Swiper(".slider-thumb__body", {
-            spaceBetween: 20,
-            slidesPerView: 4,
-            direction: 'vertical',
-            navigation: {
-                prevEl: ".slider-thumb-prev",
-                nextEl: ".slider-thumb-next",
-            },
-        }),
-    },
+
 });
+const fachwerkTabs = document.querySelector('.fachwerk__tabs')
+const tabsButton = fachwerkTabs.querySelectorAll('.tabs__button')
+const tabsContent = fachwerkTabs.querySelectorAll('.tabs__content')
+
+flsFunctions.tabs(fachwerkTabs, tabsButton, tabsContent)
+
 
 new Swiper('.slider-project__body', {
     observer: true,
@@ -239,6 +233,7 @@ new Swiper('.slider-project__body', {
 
 const tabBtn = document.querySelectorAll('.project-list__btn')
 const tabsItems = document.querySelectorAll('.project-tab')
+
 
 tabBtn.forEach(item => {
     item.addEventListener("click", () => {

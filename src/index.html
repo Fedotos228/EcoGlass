@@ -11,7 +11,7 @@
                     <div class="intro-slider__slider">
                         <div class="slider-intro__body swiper">
                             <div class="slider-intro__slide"
-                                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@img/bg_img.jpg) 50% 50% / cover no-repeat;">
+                                style="background: url(@img/bg_img.jpg) 50% 50% / cover no-repeat;">
                                 <div class="slide__container">
                                     <div class="slide-body">
                                         <small>Case ecologice</small>
@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="slider-intro__slide"
-                                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@img/bg_img2.jpg) 50% 50% / cover no-repeat;">
+                                style="background: url(@img/bg_img2.jpg) 50% 50% / cover no-repeat;">
                                 <div class="slide__container">
                                     <div class="slide-body">
                                         <small>Case ecologice</small>
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="slider-intro__slide"
-                                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@img/bg_img3.jpg) 50% 50% / cover no-repeat;">
+                                style="background: url(@img/bg_img3.jpg) 50% 50% / cover no-repeat;">
                                 <div class="slide__container">
                                     <div class="slide-body">
                                         <small>Case ecologice</small>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="slider-intro__slide"
-                                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@img/bg_img4.jpg) 50% 50% / cover no-repeat;">
+                                style="background: url(@img/bg_img4.jpg) 50% 50% / cover no-repeat;">
                                 <div class="slide__container">
                                     <div class="slide-body">
                                         <small>Case ecologice</small>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="slider-intro__slide"
-                                style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.04) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(@img/bg_img5.jpg) 50% 50% / cover no-repeat;">
+                                style="background: url(@img/bg_img5.jpg) 50% 50% / cover no-repeat;">
                                 <div class="slide__container">
                                     <div class="slide-body">
                                         <small>Case ecologice</small>
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-us" id="about">
+        <div class="about-us" data-scroll="about">
             <div class="about-us__container">
                 <img src="@img/about.jpg" class="lightbox-imag" alt="about">
                 <div class="about-us__content">
@@ -104,127 +104,128 @@
                 </div>
             </div>
         </div>
-        <div class="construction" id="constructions">
-            <div class="construction-tabs">
-                <button class="construction-tabs__item active">Arhitectură</button>
-                <button class="construction-tabs__item">Structură</button>
-                <button class="construction-tabs__item">Inovație</button>
-                <button class="construction-tabs__item">Cum construim</button>
-                <button class="construction-tabs__item">Costul</button>
+        <div class="fachwerk" data-scroll="fachwerk">
+            <div class="section-header">
+                <h2>FACHWERK</h2>
             </div>
-            <div class="construction__container">
-                <div class="construction-body">
-                    <div class="page__thumb-slider thumb-slider">
-                        <div class="thumb-slider__body">
-                            <div class="thumb-slider__slider">
-                                <button type="button" class="slider-arrow slider-thumb-prev slider-arrow__prev">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.3335 13.3333L16.0002 20L22.6668 13.3333L9.3335 13.3333Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
-                                <div class="slider-thumb__body swiper">
-                                    <div class="slider-thumb__slide">Design exclusivist. Creativitate fara limite.</div>
-                                    <div class="slider-thumb__slide">Joc al luminii. Spiritul libertatii.</div>
-                                    <div class="slider-thumb__slide">Simplitatea - forma suprema a bunului gust.
-                                        Leonardo da Vinci</div>
-                                    <div class="slider-thumb__slide">Arhitectura solara a caselor KAGER</div>
-                                    <div class="slider-thumb__slide">Design exclusivist. Creativitate fara limite.</div>
+            <div class="fachwerk__tabs tabs">
+                <ul class="tabs__list">
+                    <li class="tabs__item">
+                        <button class="tabs__button tabs__button--active"
+                            data-tabs-path="tab-first">Arhitectură</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" data-tabs-path="tab-second">Structură</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" data-tabs-path="tab-third">Inovație</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" data-tabs-path="tab-fourth">Cum construim</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" data-tabs-path="tab-fifth">Costul</button>
+                    </li>
+                </ul>
+                <div class="fachwerk__container">
+                    <div class="tabs__content tabs__content--active" data-tabs-target="tab-first">
+                        <div class="fachwerk-info">
+
+                            <p><b>KAGER</b> - sinonom al individualitatii. Noi va propunem un design exclusivist
+                                interior si
+                                exterior
+                                de inalt nivel, va vom ajuta in alegerea materialelor de decoratiune, a mobilierului si
+                                corpurilor de iluminat, sa creati designul unic al terenului adiacent si sa implementati
+                                toate
+                                acestea in viata. </p>
+
+                            <p>Dumneavoastra aveti posibilitatea crearii unui proiect individual al viitoarei
+                                case impreuna cu arhitectul din Baku - Faruh Muslimov. El are o experienta bogata in
+                                proiectarea
+                                caselor de lux. Exemple ale lucrarilor acestui arhitect la puteti vizualiza urmarind
+                                galerie
+                                foto.</p>
+                        </div>
+                        <div class="page__fachwerk-slider fachwerk-slider">
+                            <div class="fachwerk-slider__body">
+                                <div class="fachwerk-slider__slider">
+                                    <div class="slider-fachwerk__body swiper">
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa2.jpg" alt="casa" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa3.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa4.jpg" alt="" loading="lazy">
+                                        </div>
+                                    </div>
+
+                                    <div class="slider-fachwerk-controls">
+                                        <div class="slider-fachwerk-controls__arrows slider-arrows">
+                                            <button type="button" class="slider-arrow slider-arrow__prev">
+                                                <img src="@img/svg/arrow_left.svg" alt="">
+                                            </button>
+                                            <button type="button" class="slider-arrow slider-arrow__next">
+                                                <img src="@img/svg/arrow_left.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <button type="button" class="slider-arrow slider-thumb-next slider-arrow__next">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.3335 13.3333L16.0002 20L22.6668 13.3333L9.3335 13.3333Z"
-                                            fill="black" />
-                                    </svg>
-                                </button>
                             </div>
                         </div>
                     </div>
+                    <div class="tabs__content" data-tabs-target="tab-second">
+                        <div class="page__fachwerk-slider fachwerk-slider">
+                            <div class="fachwerk-slider__body">
+                                <div class="fachwerk-slider__slider">
+                                    <div class="slider-fachwerk__body swiper">
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa2.jpg" alt="casa" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa3.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="slider-fachwerk__slide">
+                                            <img src="@img/casa4.jpg" alt="" loading="lazy">
+                                        </div>
+                                    </div>
 
-                    <div class="page__construction-slider construction-slider">
-                        <div class="construction-slider__body">
-                            <div class="construction-slider__slider">
-                                <div class="slider-construction__body swiper">
-                                    <div class="slider-construction__slide"
-                                        style="background: url(./img/bg_img.jpg) 50% 50% / cover no-repeat">
-                                        <div class="contruction__information">
-                                            KAGER - sinonom al individualitatii. Noi va propunem un design exclusivist
-                                            interior si exterior de inalt nivel, va vom ajuta in alegerea materialelor
-                                            de decoratiune, a mobilierului si corpurilor de iluminat, sa creati designul
-                                            unic al terenului adiacent
-                                            si sa implementati toate acestea in viata. Dumneavoastra aveti posibilitatea
-                                            crearii unui proiect individual al viitoarei case impreuna cu arhitectul din
-                                            Baku - Faruh Muslimov. El are o experienta bogata in
-                                            proiectarea caselor de lux. Exemple ale lucrarilor acestui arhitect la
-                                            puteti vizualiza urmarind galerie foto.
-                                        </div>
-                                    </div>
-                                    <div class="slider-construction__slide"
-                                        style="background: url(./img/bg_img2.jpg) 50% 50% / cover no-repeat">
-                                        <div class="contruction__information">
-                                            KAGER - sinonom al individualitatii. Noi va propunem un design exclusivist
-                                            interior si exterior de inalt nivel, va vom ajuta in alegerea materialelor
-                                            de decoratiune, a mobilierului si corpurilor de iluminat, sa creati designul
-                                            unic al terenului adiacent
-                                            si sa implementati toate acestea in viata. Dumneavoastra aveti posibilitatea
-                                            crearii unui proiect individual al viitoarei case impreuna cu arhitectul din
-                                            Baku - Faruh Muslimov. El are o experienta bogata in
-                                        </div>
-                                    </div>
-                                    <div class="slider-construction__slide"
-                                        style="background: url(./img/bg_img3.jpg) 50% 50% / cover no-repeat">
-                                        <div class="contruction__information">
-                                            KAGER - sinonom al individualitatii. Noi va propunem un design exclusivist
-                                            interior si exterior de inalt nivel, va vom ajuta in alegerea materialelor
-                                            de decoratiune, a mobilierului si corpurilor de iluminat, sa creati designul
-                                            unic al terenului adiacent
-                                            si sa implementati toateilor acestui arhitect la puteti vizualiza urmarind
-                                            galerie foto.
-                                        </div>
-                                    </div>
-                                    <div class="slider-construction__slide"
-                                        style="background: url(./img/bg_img4.jpg) 50% 50% / cover no-repeat">
-                                        <div class="contruction__information">
-                                            KAGER - sinonom al indiviin viata. Dumneavoastra aveti posibilitatea crearii
-                                            unui proiect individual al viitoarei case impreuna cu arhitectul din Baku -
-                                            Faruh Muslimov. El are o experienta bogata in proiectarea caselor de lux.
-                                            Exemple ale lucrarilor acestui
-                                            arhitect la puteti vizualiza urmarind galerie foto.
-                                        </div>
-                                    </div>
-                                    <div class="slider-construction__slide"
-                                        style="background: url(./img/bg_img5.jpg) 50% 50% / cover no-repeat">
-                                        <div class="contruction__information">
-                                            KAGER - sinonom al individualitatii. Noi va propunem un design exclusivist
-                                            interior si exterior de inalt nivel, va vom ajuta in alegerea materialelor
-                                            de decoratiune, a mobilierului si corpurilor de iluminat, sa creati designul
-                                            unic al terenului adiacent
-                                            si sa implementati toate acestastra aveti posibilitatea crearii unui proiect
-                                            individual al viitoarei case impreuna cu arhitectul din Baku - Faruh
-                                            Muslimov. El are o experienta bogata in proiectarea caselor de
-                                            lux. Exemple ale lucrarilor acestui arhitect la puteti vizualiza urmarind
-                                            galerie foto.
+                                    <div class="slider-fachwerk-controls">
+                                        <div class="slider-fachwerk-controls__arrows slider-arrows">
+                                            <button type="button" class="slider-arrow slider-arrow__prev">
+                                                <img src="@img/svg/arrow_left.svg" alt="">
+                                            </button>
+                                            <button type="button" class="slider-arrow slider-arrow__next">
+                                                <img src="@img/svg/arrow_left.svg" alt="">
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="tabs__content" data-tabs-target="tab-third">
+
+                    </div>
+                    <div class="tabs__content" data-tabs-target="tab-fourth">
+
+                    </div>
+                    <div class="tabs__content" data-tabs-target="tab-fifth">
+
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="newsletter" style="background: url(@img/newsletter.jpg) 50% 50% / cover no-repeat">
-            <h2>Fii primul care primește <span>oferte</span> exclusive</h2>
-            <h2 class="subtitle">Abonează-te la newsletter-ul nostru</h2>
-            <form class="form" action="/">
-                <input type="email" name="" id="" placeholder="Email">
-                <input type="submit" value="Abonează-te">
-            </form>
-        </div> -->
-        <div class="projects" id="projects">
-            <div class="projects-header">
+
+        <div class="projects" data-scroll="projects">
+            <div class="section-header">
                 <h2>Proiectele noastre</h2>
             </div>
             <div class="project-list">
@@ -395,7 +396,10 @@
                 </div>
             </div>
         </div>
-        <div class="gallery" id="gallery">
+        <div class="gallery" data-scroll="gallery">
+            <div class="section-header">
+                <h2>Galerie</h2>
+            </div>
             <div class="page__gallery-slider gallery-slider">
                 <div class="gallery-slider__body">
                     <div class="gallery-slider__slider">
@@ -443,8 +447,12 @@
                 </div>
             </div>
         </div>
-        <div class="contacts" id="formular">
-            <div class="formular" style="background: url(@img/formular.jpg) 50% 50% / cover no-repeat;">
+        <div class="contacts" data-scroll="formular"
+            style="background: url(@img/formular.jpg) 50% 50% / cover no-repeat;">
+            <div class="section-header">
+                <h2>Contancte</h2>
+            </div>
+            <div class="formular">
                 <h2>Pentru orice alte <span>informații</span>, va rugam sa completați formularul</h2>
                 <h2 class="subtitle">sau sunați la +373 069 352 322</h2>
                 <form class="form" action="/">
@@ -452,9 +460,8 @@
                     <input type="tel" placeholder="Telefon">
                     <input type="submit" value="Trimite">
                 </form>
-
             </div>
-            <div class="newsletter" style="background: url(@img/newsletter.jpg) 50% 50% / cover no-repeat">
+            <div class="newsletter">
                 <h2 class="subtitle">Abonează-te la newsletter-ul nostru</h2>
                 <form class="form" action="/">
                     <input type="email" name="" id="" placeholder="Email">

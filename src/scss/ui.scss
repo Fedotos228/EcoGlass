@@ -81,6 +81,17 @@ h2 {
     margin-bottom: 50px !important;
 }
 
+.section-header {
+    background-color: $greencolor;
+    padding: 30px 0;
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 800;
+    }
+}
+
 input {
     width: 320px;
     padding: 20px 10px 20px 20px;
@@ -104,8 +115,6 @@ input {
         border: 1px solid #fff;
     }
 }
-
-
 
 input[type=submit] {
     cursor: pointer;
@@ -135,6 +144,8 @@ input[type=submit] {
     @include adaptiv-value('gap', 20, 5, 1);
 
     svg {
+        width: 36px;
+        height: 36px;
         transition: .1s;
 
         &:hover {

@@ -1,13 +1,17 @@
 .header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 10;
     background: #FFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
     padding: 30px 0;
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        animation: fixedHeader 0.4s;
+        z-index: 9;
+    }
 
     &__container {
         display: flex;
@@ -31,6 +35,8 @@
         .header-nav {
             display: flex;
             align-items: center;
+
+
             @include adaptiv-value('gap', 50, 20, 1);
 
             // @media(max-width: $mobileSmall) {
@@ -74,11 +80,21 @@
                 }
 
                 li {
-                    a {
+                    button {
                         text-transform: uppercase;
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes fixedHeader {
+    from {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
